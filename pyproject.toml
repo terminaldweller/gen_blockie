@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gen-blockie"
+version = "0.1.0"
+description = "Generate blockie identicons from seed phrases or files"
+readme = { text = "Generate mirrored blockie identicons from a seed phrase or file contents. Usage: gen_blockie --seed hello --out identicon.png", content-type = "text/plain" }
+requires-python = ">=3.10"
+dependencies = ["Pillow>=9.0"]
+keywords = ["blockies", "identicon", "avatar", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Multimedia :: Graphics",
+]
+
+[project.scripts]
+gen_blockie = "gen_blockie:main"
+
+[tool.setuptools]
+py-modules = ["blockies", "gen_blockie"]
